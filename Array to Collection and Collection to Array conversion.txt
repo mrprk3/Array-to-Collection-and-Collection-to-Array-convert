@@ -1,0 +1,32 @@
+//Convert Array object into collection
+package com.mrprk;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Test11 {
+    public static void main(String[] args) {
+// convert Array data to collection
+   String arr[]={"Atim","Binod","Sultan"};
+       ArrayList <String> al = new ArrayList <String>(Arrays.asList(arr));
+           System.out.println(al);
+           System.out.println("====================================");
+//collection data to Array with generics
+    ArrayList <String> a2 = new ArrayList <String>();
+    a2.add("Aman");
+    a2.add("Abhishek");
+    a2.add("Dev");
+    String s1[] = new String[a2.size()];  // to understand the size of a2 
+    a2.toArray(s1);                        // collect data from a2 to s1 with Array formate
+    for(String ss :s1){
+        System.out.println(ss);
+    }
+        System.out.println("==========================================");
+//convert normal version collection data to array
+    ArrayList a3 = new ArrayList();
+    a3.add(10);
+    a3.add("Ankush");
+    Object o[] = a3.toArray(); // toArray convert collection object to Array format
+    for(Object oo :o){
+        System.out.println(oo);
+       }
+      }
+    }
